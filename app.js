@@ -23,6 +23,10 @@ app.use(function(req, res, next) {
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 
+app.get('/',(req,res)=>{
+res.end('Running')
+})
+
 
 app.use('/formulario', require('./routes/formulario.routes'));
 
